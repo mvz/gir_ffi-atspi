@@ -1,0 +1,4 @@
+lib/gir_ffi-atspi.rb
+lib/gir_ffi-atspi/version.rb
+README.md
+COPYING.LIB
