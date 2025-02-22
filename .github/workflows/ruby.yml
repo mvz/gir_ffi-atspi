@@ -11,17 +11,28 @@ name: Ruby
     - cron: '16 4 12 * *'
   workflow_dispatch:
 
-
 jobs:
   test:
+
     runs-on: ubuntu-latest
+
     name: Ruby ${{ matrix.ruby }}
+
     strategy:
       matrix:
         ruby: ["3.4"]
 
     steps:
       - uses: actions/checkout@v4
+      - name: Install non-ruby dependencies
+        run: |
+          # Ensure all packages can be found
+          sudo apt-get update
+          # Provides libgirepository-1.0.so.1
+          sudo apt-get install libgirepository-1.0-1
+          # Provides Atspi-2.0.typelib
+          sudo apt-get install gir1.2-atspi-2.0
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
