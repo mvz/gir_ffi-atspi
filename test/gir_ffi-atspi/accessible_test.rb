@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require "aruba/api"
 
 describe Atspi::Accessible do
   include Aruba::Api
+  include EndToEndTestHelpers
 
   describe "#get_text" do
     it "accepts two arguments" do
@@ -21,15 +21,7 @@ describe Atspi::Accessible do
       gui_app = File.expand_path("../fixtures/simple_gui.rb", __dir__)
       app_process = run_command "ruby #{gui_app}"
 
-      desktop = Atspi.get_desktop 0
-      app = nil
-      4.times do
-        desktop.child_count.times.reverse_each do |i|
-          child = desktop.get_child_at_index(i)
-          break app = child if child.name == "simple_gui.rb"
-        end
-        break if app
-      end
+      app = find_app("simple_gui.rb")
 
       frame = app.child_at_index(0)
       box = frame.child_at_index(1)
