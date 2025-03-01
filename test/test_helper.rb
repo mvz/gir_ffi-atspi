@@ -22,4 +22,13 @@ module EndToEndTestHelpers
 
     app or raise "Application not found"
   end
+
+  def find_child_with_role(parent, role)
+    parent.child_count.times do |i|
+      child = parent.child_at_index(i)
+      return child if child.role == role
+    end
+
+    nil
+  end
 end

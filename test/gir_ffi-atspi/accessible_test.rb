@@ -24,7 +24,7 @@ describe Atspi::Accessible do
       app = find_app("simple_gui.rb")
 
       frame = app.child_at_index(0)
-      box = frame.child_at_index(1)
+      box = find_child_with_role(frame, :filler)
 
       text = box.child_at_index(0)
       _(text.get_text(0, -1)).must_equal("Hello, World!")
