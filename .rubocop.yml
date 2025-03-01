@@ -2,10 +2,12 @@ inherit_mode:
   merge:
     - Exclude
 
-require:
-  - rubocop-minitest
-  - rubocop-packaging
+plugins:
   - rubocop-performance
+  - rubocop-minitest
+
+require:
+  - rubocop-packaging
 
 AllCops:
   Exclude:
