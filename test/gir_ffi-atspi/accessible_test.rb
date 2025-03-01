@@ -23,11 +23,12 @@ describe Atspi::Accessible do
 
       desktop = Atspi.get_desktop 0
       app = nil
-      until app
+      4.times do
         desktop.child_count.times.reverse_each do |i|
           child = desktop.get_child_at_index(i)
           break app = child if child.name == "simple_gui.rb"
         end
+        break if app
       end
 
       frame = app.child_at_index(0)
