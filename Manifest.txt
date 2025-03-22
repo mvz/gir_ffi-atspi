@@ -1,5 +1,7 @@
 lib/gir_ffi-atspi.rb
 lib/gir_ffi-atspi/accessible.rb
 lib/gir_ffi-atspi/version.rb
+CHANGELOG.md
+CONTRIBUTING.md
 README.md
 COPYING.LIB

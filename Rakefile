@@ -11,7 +11,7 @@ require "rubocop/rake_task"
 RuboCop::RakeTask.new
 
 Rake::Manifest::Task.new do |t|
-  t.patterns = ["lib/**/*.rb", "README.md", "COPYING.LIB"]
+  t.patterns = ["lib/**/*.rb", "*.md", "COPYING.LIB"]
 end
 
 task default: [:test, :rubocop, "manifest:check"]

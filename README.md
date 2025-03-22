@@ -4,31 +4,38 @@ GirFFI-based Ruby bindings for Atspi
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "gir_ffi-atspi"
+
+desktop = Atspi.get_desktop(0)
+child = desktop.get_child_at_index(0)
+# ...
+```
 
 ## Installation
 
-TODO: Put installation instructions here
+```bash
+gem install gir_ffi-atspi
+```
 
-## Development
+## Requirements
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run
-`rake test` to run the tests. You can also run `bin/console` for an interactive
-prompt that will allow you to experiment.
+GirFFI-Atspi needs the [GirFFI](https://rubygems.org/gems/gir_ffi) gem and
+supports the same platforms.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To
-release a new version, update the version number in `version.rb`, and then run
-`bundle exec rake release`, which will create a git tag for the version, push
-git commits and the created tag, and push the `.gem` file to
-[rubygems.org](https://rubygems.org).
+In addition, it needs introspection data for the Atspi library.
+On Debian and Ubuntu, you can get this by installing `gir1.2-atspi-2.0`.
+
+GirFFI-Atspi has not been tested on Mac OS X or Microsoft Windows. YMMV. Pull
+requests to support these platforms are welcome.
 
 ## Contributing
 
-Bug reports and pull requests are welcome [on GitHub](https://github.com/mvz/gir_ffi-atspi).
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ## License
 
-Copyright &copy; 2025, [Matijs van Zuijlen](http://www.matijs.net/)
+Copyright &copy; 2025 [Matijs van Zuijlen](http://www.matijs.net/)
 
 GirFFI-Atspi is free software, distributed under the terms of the GNU Lesser
 General Public License, version 2.1 or later. See the file COPYING.LIB for more
