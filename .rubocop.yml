@@ -3,11 +3,9 @@ inherit_mode:
     - Exclude
 
 plugins:
-  - rubocop-performance
   - rubocop-minitest
-
-require:
   - rubocop-packaging
+  - rubocop-performance
 
 AllCops:
   Exclude:

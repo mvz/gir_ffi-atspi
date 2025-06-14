@@ -11,9 +11,9 @@ gem "aruba", "~> 2.3"
 gem "gir_ffi-gtk", "~> 0.18.0"
 gem "minitest", "~> 5.16"
 
-gem "rubocop", "~> 1.73"
+gem "rubocop", "~> 1.76"
 gem "rubocop-minitest", "~> 0.38.0"
 gem "rubocop-packaging", "~> 0.6.0"
-gem "rubocop-performance", "~> 1.24"
+gem "rubocop-performance", "~> 1.25"
 
 gem "simplecov", "~> 0.22.0"

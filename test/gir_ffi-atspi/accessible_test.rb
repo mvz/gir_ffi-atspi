@@ -27,6 +27,7 @@ describe Atspi::Accessible do
       box = find_child_with_role(frame, :filler)
 
       text = box.child_at_index(0)
+
       _(text.get_text(0, -1)).must_equal("Hello, World!")
 
       button = box.child_at_index(1)
