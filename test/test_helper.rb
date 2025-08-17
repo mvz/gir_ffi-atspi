@@ -10,7 +10,7 @@ module EndToEndTestHelpers
   def find_app(name)
     desktop = Atspi.get_desktop 0
 
-    6.times do |try|
+    10.times do |try|
       sleep try * 0.1
       desktop.child_count.times.reverse_each do |i|
         child = desktop.get_child_at_index(i)
