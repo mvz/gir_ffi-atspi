@@ -10,8 +10,10 @@ module EndToEndTestHelpers
   def find_app(name)
     desktop = Atspi.get_desktop 0
 
-    10.times do |try|
-      sleep try * 0.1
+    # Wait for about 5.0 seconds in CI and 0.3 seconds locally
+    tries = ENV["CI"] ? 50 : 3
+    tries.times do
+      sleep 0.1
       desktop.child_count.times.reverse_each do |i|
         child = desktop.get_child_at_index(i)
         return child if child.name == name
