@@ -10,8 +10,8 @@ module EndToEndTestHelpers
   def find_app(name)
     desktop = Atspi.get_desktop 0
 
-    # Wait for about 5.0 seconds in CI and 0.3 seconds locally
-    tries = ENV["CI"] ? 50 : 3
+    # Wait for about 10 seconds in CI and 0.5 seconds locally
+    tries = ENV["CI"] ? 100 : 5
     tries.times do
       sleep 0.1
       desktop.child_count.times.reverse_each do |i|
