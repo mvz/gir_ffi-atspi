@@ -8,7 +8,7 @@ gem "rake", "~> 13.0"
 gem "rake-manifest", "~> 0.2.0"
 
 gem "aruba", "~> 2.3"
-gem "gir_ffi-gtk", "~> 0.18.0"
+gem "gir_ffi-gtk", "~> 0.19.0"
 gem "minitest", "~> 6.0"
 
 gem "rubocop", "~> 1.76"
