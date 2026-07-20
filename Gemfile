@@ -12,7 +12,7 @@ gem "gir_ffi-gtk", "~> 0.19.0"
 gem "minitest", "~> 6.0"
 
 gem "rubocop", "~> 1.76"
-gem "rubocop-minitest", "~> 0.39.1"
+gem "rubocop-minitest", "~> 0.40.0"
 gem "rubocop-packaging", "~> 0.6.0"
 gem "rubocop-performance", "~> 1.25"
 
