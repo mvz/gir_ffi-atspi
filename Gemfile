@@ -16,4 +16,4 @@ gem "rubocop-minitest", "~> 0.40.0"
 gem "rubocop-packaging", "~> 0.6.0"
 gem "rubocop-performance", "~> 1.25"
 
-gem "simplecov", "~> 1.1.1"
+gem "simplecov", "~> 1.2.0"
