@@ -16,7 +16,7 @@ describe Atspi::Accessible do
     end
 
     it "fetches text in a running application" do
-      setup_aruba
+      aruba.setup
 
       gui_app = File.expand_path("../fixtures/simple_gui.rb", __dir__)
       app_process = run_command "ruby #{gui_app}"
@@ -33,7 +33,7 @@ describe Atspi::Accessible do
       button = box.child_at_index(1)
       button.do_action(0)
     ensure
-      app_process.stop
+      app_process&.stop
     end
   end
 end
